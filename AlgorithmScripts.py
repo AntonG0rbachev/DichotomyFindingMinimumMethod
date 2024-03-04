@@ -1,3 +1,4 @@
+# ДОБАВИТЬ ГРАФИК
 def dichotomy_find_min(interval: list, delta, epsilon, function) -> tuple:
     x_min: float
     iterations = 0
@@ -11,7 +12,9 @@ def dichotomy_find_min(interval: list, delta, epsilon, function) -> tuple:
             interval[0] = y_k
     else:
         x_min = sum(interval) / 2
-    return x_min, interval, iterations
+    convergence = 1 / (pow(2, iterations / 2))
+    return ("x_min = " + str(x_min), "interval = " + str(interval),
+            "iterations = " + str(iterations), "convergence = " + str(convergence))
 
 
 f = lambda x: 2 * x ** 2 - 2 * x + 3 / 2
