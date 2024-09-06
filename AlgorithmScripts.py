@@ -26,6 +26,6 @@ eps = 0.2
 l = 0.5
 print(dichotomy_find_min(L, eps, l, f))
 
-x = numpy.arange(L[0]-1, L[1]+1, 0.01)
+x = numpy.arange(L[0] - 1, L[1] + 1, 0.01)
 plot.plot(x, f(x))
 plot.show()
